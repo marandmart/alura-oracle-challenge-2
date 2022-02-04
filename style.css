@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  font-size: 4vw;
+  font-size: 4vh;
+}
+.btn {
+  padding: 1em 2em;
+  display: block;
+  color: white;
+  background-color: rgb(17, 13, 209);
+  text-decoration: none;
+  border-radius: 1em;
+}
+.footer {
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(107, 206, 231);
+  justify-content: center;
+  align-items: center;
+}
+
+.hangman {
+  border: 1px solid black;
+  height: 80vh;
+}
+
+.main-jogo {
+  display: grid;
+}
+.grid-area {
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "forca letras"
+    "forca palavra"
+    "forca teclado";
+}
+.teclado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+  width: 100%;
+}
+.botoes-teclado {
+  padding: 10px;
+}
+.primeira-coluna,
+.segunda-coluna,
+.terceira-coluna {
+  margin-bottom: 5px;
+}

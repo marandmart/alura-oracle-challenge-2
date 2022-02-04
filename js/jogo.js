@@ -1,4 +1,4 @@
-let tentativaDeLetras = [];
+let letrasTentadas = [];
 
 let partesDoCorpo = ['cabeça', 'corpo', 'braços', 'pernas', 'olhos', 'nariz', 'boca'];
 
@@ -67,7 +67,7 @@ const ProcessaTecladoVirtual = (event) => {
 const checaTentativa = (tecla) => {
     let letra = tecla.toUpperCase();
     // checa se a letra está na lista de letras tentadas
-    if (tentativaDeLetras.indexOf(letra) === -1) {
+    if (letrasTentadas.indexOf(letra) === -1) {
         if (palavra.includes(letra)) {
             // checa cada letra da palavra da forca
             palavra.map((char, index) => {
@@ -75,7 +75,7 @@ const checaTentativa = (tecla) => {
                     let item = document.getElementById('letra-' + index);
                     item.innerText = letra;
                     espacosAPreencher -= 1;
-                    tentativaDeLetras.push(letra);
+                    letrasTentadas.push(letra);
                 }
                 // serve para poder escrever a ultima letra e então mostra o alert
                 setInterval(() => {
@@ -91,12 +91,12 @@ const checaTentativa = (tecla) => {
             })
         } else {
             // adiciona a letra a lista de letras tentadas
-            let letrasTentadas = document.getElementById('letras-erradas');
+            let letrasErradas = document.getElementById('letras-erradas');
             let item = document.createElement('span');
             item.textContent = letra;
             item.className = "letra-da-palavra";
-            letrasTentadas.appendChild(item);
-            tentativaDeLetras.push(letra);
+            letrasErradas.appendChild(item);
+            letrasTentadas.push(letra);
 
             // faz o desenho na forca
             let parteDoCorpo = partesDoCorpo.shift();

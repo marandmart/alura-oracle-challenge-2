@@ -17,3 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 })
+
+// https://onebite.dev/play-with-supabase-database-in-website-with-javascript/
+// https://supabase.com/docs/reference/javascript/select

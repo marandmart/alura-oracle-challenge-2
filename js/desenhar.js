@@ -2,10 +2,10 @@ const Desenhar = (part) => {
 
     let canvas = document.getElementById('hangman');
     let context = canvas.getContext('2d');
+    context.lineWidth = 3;
 
     switch (part) {
         case 'forca':
-            context.lineWidth = 2;
             context.beginPath();
             context.moveTo(900, 900);
             context.lineTo(100, 900);
@@ -17,7 +17,6 @@ const Desenhar = (part) => {
             break;
 
         case 'cabeça':
-            context.lineWidth = 2;
             context.beginPath();
             context.arc(600, 260, 60, 0, Math.PI * 2);
             context.closePath();
@@ -25,7 +24,6 @@ const Desenhar = (part) => {
             break;
 
         case 'corpo':
-            context.lineWidth = 2;
             context.beginPath();
             context.moveTo(600, 320);
             context.lineTo(600, 600);
@@ -33,7 +31,6 @@ const Desenhar = (part) => {
             break;
 
         case 'braços':
-            context.lineWidth = 2;
             context.beginPath();
             context.moveTo(600, 400);
             context.lineTo(500, 500);
@@ -43,7 +40,6 @@ const Desenhar = (part) => {
             break;
 
         case 'pernas':
-            context.lineWidth = 2;
             context.beginPath();
             context.moveTo(600, 600);
             context.lineTo(550, 800);
@@ -53,7 +49,6 @@ const Desenhar = (part) => {
             break;
 
         case 'olhos':
-            context.lineWidth = 2;
             context.beginPath();
             context.arc(580, 250, 10, 0, Math.PI * 2);
             context.closePath(620, 250);
@@ -65,7 +60,6 @@ const Desenhar = (part) => {
             break;
 
         case 'nariz':
-            context.lineWidth = 2;
             context.beginPath();
             context.moveTo(600, 260);
             context.lineTo(605, 275);
@@ -74,7 +68,6 @@ const Desenhar = (part) => {
             break;
 
         case 'boca':
-            context.lineWidth = 2;
             context.beginPath();
             context.moveTo(615, 295);
             context.lineTo(585, 295);

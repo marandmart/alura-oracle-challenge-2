@@ -7,13 +7,32 @@
     <title>Adicionar palavras novas</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-    <script src="js/adicionarPalavras.js"></script>
+    <script src="js/server-info.js"></script>
+    <script src="js/importarPalavras.js"></script>
+    <script src="js/inserirPalavras.js"></script>
     <script src="js/adicionar.js"></script>
   </head>
-  <body>
-    <div>
-      <input type="text" />
-      <button>Enviar palavra</button>
+  <body class="adicionar-palavras">
+    <div class="input-palavras">
+      <h1>Adicionar palavra novas</h1>
+      <br />
+      <h2>Regras</h2>
+      <br />
+      <ul>
+        <li>Somente use letra de A até Z</li>
+        <li>Somente palavras sem acento</li>
+        <li>Não pode haver números nas palavras</li>
+        <li>Palavras com 'Ç' também não são aceitas</li>
+      </ul>
+      <br />
+      <input type="text" id="input-palavra" />
+      <br />
+      <button id="enviar-palavra">Enviar palavra</button>
+    </div>
+    <div class="palavras-no-db">
+      <h2>Palavras que já existem no jogo</h2>
+      <br />
+      <ul id="palavras-do-jogo"></ul>
     </div>
   </body>
 </html>

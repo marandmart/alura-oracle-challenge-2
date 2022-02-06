@@ -13,6 +13,49 @@
   justify-content: center;
   align-items: center;
 }
+.adicionar-palavras {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.input-palavras {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.input-palavras ul {
+  text-align: left;
+}
+.input-palavras input {
+  padding: 0.5em 0.8em;
+  width: 70%;
+  font-size: 30px;
+  border: 1px solid black;
+}
+.input-palavras button {
+  padding: 0.3em 0.8em;
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: large;
+  border-radius: 1px;
+}
+.palavras-no-db {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
 
 .main {
   height: 85vh;
@@ -114,6 +157,10 @@
     margin: auto;
     margin-bottom: 0;
   }
+  .adicionar-palavras {
+    height: 100vh;
+    padding: 20px 0;
+  }
   .letras-erradas {
     width: 100%;
     margin: auto;
@@ -152,6 +199,32 @@
 }
 
 @media (max-width: 480px) {
+  .header h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .btn {
+    width: 80%;
+    text-align: center;
+  }
+  .adicionar-palavras {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-top: 20px;
+  }
+  .input-palavras {
+    margin-bottom: 30px;
+  }
+  .input-palavras input {
+    width: 100%;
+    font-size: 20px;
+  }
+  .palavras-no-db {
+    margin-bottom: 30px;
+  }
   .main-jogo {
     flex-direction: column;
     height: auto;
@@ -170,6 +243,7 @@
     margin: auto;
     display: flex;
     flex-direction: column;
+    height: auto;
   }
   .palavra {
     height: auto;
@@ -195,5 +269,8 @@
   }
   .botoes-teclado {
     padding: 10px;
+  }
+  .footer {
+    margin-top: 23px;
   }
 }

@@ -12,11 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     Desenhar('forca');
 
-    carregarPalavras().then(main, handleError);
+    carregarPalavras().then(processarDadosServidor, handleError);
+
+    adicionaEventListeners();
 
 })
 
-const main = (result) => {
+const processarDadosServidor = (result) => {
     let db = [...result];
 
     palavra = db[Math.floor(Math.random() * db.length)].palavras.split("");
@@ -24,7 +26,6 @@ const main = (result) => {
     espacosAPreencher = palavra.length;
 
     adicionarEspacoDaPalavra(palavra);
-    adicionaEventListeners();
 }
 
 const handleError = (erro) => {
@@ -53,7 +54,7 @@ const adicionaEventListeners = () => {
 }
 
 const ProcessaTeclado = (event) => {
-    if (/[a-z]/.test(event.key)) {
+    if (/[a-z]/.test(event.key) && event.key !== 'Backspace' && event.key !== 'Enter') {
         checaTentativa(event.key);
     }
 }
@@ -87,7 +88,7 @@ const checaTentativa = (tecla) => {
 
                         limpaEventListeners();
                     }
-                }, 250)
+                }, 400)
             })
         } else {
             // adiciona a letra a lista de letras tentadas

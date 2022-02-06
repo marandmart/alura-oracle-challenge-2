@@ -10,7 +10,7 @@ async function inserirPalavras(dado) {
             palavra
         ])
 
-    alert("Palavra enviada!");
+    alert("Palavra adicionada!");
     console.log(data);
     console.log(error);
 }

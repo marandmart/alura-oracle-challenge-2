@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+.height-control {
+  opacity: 0;
+}
 .header {
   height: 10vh;
   width: 100%;
@@ -68,14 +71,22 @@
 }
 .palavra {
   text-align: center;
-  height: 25%;
+  height: 10%;
   width: 100%;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .letras-erradas {
-  height: 25%;
-}
-.letras-erradas h2 {
-  text-align: center;
+  height: 15%;
+  border: 1px solid red;
+  color: red;
+  width: 75%;
+  margin-bottom: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .teclado {
   display: flex;
@@ -110,23 +121,20 @@
   .jogo-info {
     width: 100%;
     margin: auto;
-    display: grid;
-    grid-template:
-      "palavra letras-erradas" 150px
-      "teclado teclado" 1fr
-      / 1fr 1fr;
-    gap: 0;
+    display: flex;
+    flex-direction: column;
   }
   .palavra {
     height: auto;
-    justify-self: center;
-    grid-row: 1;
+    width: auto;
   }
   .letras-erradas {
     margin: auto;
-    height: auto;
-    width: 100%;
-    grid-row: 1;
+    padding: 1em 0;
+    width: 80%;
+  }
+  .letras-erradas span {
+    width: auto;
   }
   .letra-da-palavra {
     width: 100%;
@@ -137,8 +145,6 @@
     height: 300px;
     width: 100%;
     padding: auto;
-    grid-row: 2;
-    grid-column: span 2;
   }
   .botoes-teclado {
     padding: 25px;
@@ -162,21 +168,20 @@
   .jogo-info {
     width: 100%;
     margin: auto;
-    display: grid;
-    grid-template-areas:
-      "palavra letras-erradas"
-      "teclado teclado";
+    display: flex;
+    flex-direction: column;
   }
   .palavra {
     height: auto;
-    justify-self: center;
-    grid-row: 1;
+    width: auto;
   }
   .letras-erradas {
     margin: auto;
-    height: auto;
-    width: 100%;
-    grid-row: 1;
+    padding: 1em 0;
+    width: 80%;
+  }
+  .letras-erradas span {
+    width: auto;
   }
   .letra-da-palavra {
     width: 100%;
@@ -184,11 +189,9 @@
   }
   .teclado {
     margin: 10px 0;
-    height: 300px;
+    height: 265px;
     width: 100%;
     padding: auto;
-    grid-row: 2;
-    grid-column: span 2;
   }
   .botoes-teclado {
     padding: 10px;

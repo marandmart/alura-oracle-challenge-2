@@ -12,6 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 60px;
 }
 .adicionar-palavras {
   display: flex;
@@ -84,11 +85,13 @@
   background-color: rgb(148, 220, 238);
   justify-content: center;
   align-items: center;
+  min-height: 40px;
 }
 
 .main-jogo {
   display: flex;
   height: 85vh;
+  min-height: 420px;
 }
 .forca {
   width: 50%;
